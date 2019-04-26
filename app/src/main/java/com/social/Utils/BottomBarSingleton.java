@@ -36,17 +36,17 @@ public class BottomBarSingleton {
         bottomBarItemMap.put(AppConstants.BottomBar.ViewTags.VIEW_TAG_HOME, bottomBarhome);
 
         BottomBarItem bottomBarGallery = new BottomBarItem(mContext);
-        bottomBarGallery.setDrawablesFromId(R.drawable.ic_b_gallery,R.drawable.ic_gallery);
-        bottomBarItemMap.put(AppConstants.BottomBar.ViewTags.VIEW_TAG_GALLERY, bottomBarGallery);
+        bottomBarGallery.setDrawablesFromId(R.drawable.ic_b_search,R.drawable.ic_search);
+        bottomBarItemMap.put(AppConstants.BottomBar.ViewTags.VIEW_TAG_SEARCH, bottomBarGallery);
 
 
         BottomBarItem bottomBarCreate = new BottomBarItem(mContext);
-        bottomBarCreate.setDrawablesFromId( R.drawable.ic_comment,R.drawable.ic_comment);
-        bottomBarItemMap.put(AppConstants.BottomBar.ViewTags.VIEW_TAG_CREATE, bottomBarCreate);
+        bottomBarCreate.setDrawablesFromId( R.drawable.ic_b_channel,R.drawable.ic_channel);
+        bottomBarItemMap.put(AppConstants.BottomBar.ViewTags.VIEW_TAG_CHANNEL, bottomBarCreate);
 
         BottomBarItem bottomBarVideo = new BottomBarItem(mContext);
-        bottomBarVideo.setDrawablesFromId(R.drawable.ic_b_video,R.drawable.ic_video);
-        bottomBarItemMap.put(AppConstants.BottomBar.ViewTags.VIEW_TAG_VIDEO, bottomBarVideo);
+        bottomBarVideo.setDrawablesFromId(R.drawable.ic_b_notification,R.drawable.ic_video);
+        bottomBarItemMap.put(AppConstants.BottomBar.ViewTags.VIEW_TAG_NOTIFICATION, bottomBarVideo);
 
         BottomBarItem bottomBarProfile = new BottomBarItem(mContext);
         bottomBarProfile.setDrawablesFromId(R.drawable.ic_b_user,R.drawable.ic_profile);

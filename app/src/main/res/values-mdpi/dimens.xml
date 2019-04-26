@@ -21,10 +21,10 @@
     <dimen name="text_left">4dp</dimen>
     <dimen name="img_width">20dp</dimen>
     <dimen name="img_height">20dp</dimen>
-    <dimen name="bottom_bar_margin">10dp</dimen>
+    <dimen name="bottom_bar_margin">6dp</dimen>
     <dimen name="img_width_home">30dp</dimen>
     <dimen name="img_height_home">30dp</dimen>
-    <dimen name="text_size_bottom_bar">16sp</dimen>
+    <dimen name="text_size_bottom_bar">10sp</dimen>
     <dimen name="text_size_12_sp">12sp</dimen>
     <dimen name="img_thumb">50dp</dimen>
     <dimen name="img_width_profile">14dp</dimen>
@@ -32,4 +32,5 @@
     <dimen name="img_width_account">22dp</dimen>
     <dimen name="txt_top">10dp</dimen>
     <dimen name="txt_bottom">10dp</dimen>
+    <dimen name="bottom_bar_margin_top">4dp</dimen>
 </resources>

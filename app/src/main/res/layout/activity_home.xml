@@ -53,67 +53,16 @@
                 layout="@layout/layout_generic_toolbar"
                 android:visibility="visible" />
         </android.support.constraint.ConstraintLayout>
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/clCustomOption"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="bottom|center"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:background="@android:color/transparent"
-            android:layout_marginBottom="100dp"
-            android:visibility="gone">
 
-            <com.social.Ui.CustomeView.CustomTextView
-                android:id="@+id/txt_gallery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/text_create_gallery"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_14_sp"
-                app:fontType="gotham_book"
-                android:padding="5dp"
-                android:background="@color/layoutcolor"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/txt_video"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginLeft="@dimen/layout_right"/>
-
-            <com.social.Ui.CustomeView.CustomTextView
-                android:id="@+id/txt_video"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/text_create_video"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:padding="5dp"
-                android:background="@color/layoutcolor"
-                android:textSize="@dimen/text_size_14_sp"
-                app:fontType="gotham_book"
-                app:layout_constraintEnd_toStartOf="@+id/txt_gallery"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" />
-
-
-        </android.support.constraint.ConstraintLayout>
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="bottom|center"
-            android:layout_marginBottom="30dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="65dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:onClick="openDialog"
             app:backgroundTint="@color/white"
-            app:srcCompat="@drawable/ic_plus" />
+            app:srcCompat="@drawable/ic_b_gallery" />
     </android.support.design.widget.CoordinatorLayout>
 </LinearLayout>

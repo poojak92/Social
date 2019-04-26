@@ -9,13 +9,14 @@
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
+
     <ImageView
         android:id="@+id/iv_home"
         style="@style/image_attribute_home"
-        android:layout_marginLeft="18dp"
-        android:src="@drawable/ic_home"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="@dimen/bottom_bar_margin_top"
+        android:src="@drawable/ic_b_home"
         android:tag="@string/bottom_bar_tag_home"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,124 +24,126 @@
         android:id="@+id/tv_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/bottom_bar_margin"
+        android:layout_marginTop="@dimen/bottom_bar_margin_top"
+        android:layout_marginBottom="@dimen/bottom_bar_margin_top"
         android:tag="@string/bottom_bar_tag_text_view_home"
         android:text="@string/bootom_bar_home"
         android:textColor="@color/hint_color"
         android:textSize="@dimen/text_size_bottom_bar"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@+id/iv_home"
         app:layout_constraintRight_toRightOf="@+id/iv_home"
         app:layout_constraintTop_toBottomOf="@+id/iv_home" />
 
+    <!-- TRANSACTION SECTION -->
 
     <ImageView
-        android:id="@+id/iv_gallery"
+        android:id="@+id/iv_search"
         style="@style/image_attribute_home"
-        android:src="@drawable/ic_gallery"
-        android:tag="@string/bottom_bar_tag_gallery"
-        app:layout_constraintBottom_toBottomOf="parent"
-
+        android:layout_marginTop="@dimen/bottom_bar_margin_top"
+        android:src="@drawable/ic_search"
+        android:tag="@string/bottom_bar_tag_search"
         app:layout_constraintLeft_toRightOf="@+id/iv_home"
-        app:layout_constraintRight_toLeftOf="@+id/iv_create"
+        app:layout_constraintRight_toLeftOf="@+id/iv_mychannel"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.social.Ui.CustomeView.CustomTextView
-        android:id="@+id/tv_gallery"
+        android:id="@+id/tv_search"
+        style="@style/image_attribute_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/bottom_bar_margin"
-        android:tag="@string/bottom_bar_tag_text_view_gallery"
-        android:text="@string/bootom_bar_gallery"
+        android:layout_marginTop="@dimen/bottom_bar_margin_top"
+        android:layout_marginBottom="@dimen/bottom_bar_margin_top"
+        android:tag="@string/bottom_bar_tag_text_view_search"
+        android:text="@string/bootom_bar_search"
         android:textColor="@color/hint_color"
         android:textSize="@dimen/text_size_bottom_bar"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="@+id/iv_gallery"
-        app:layout_constraintRight_toRightOf="@+id/iv_gallery"
-        app:layout_constraintTop_toBottomOf="@+id/iv_gallery" />
+        app:layout_constraintLeft_toLeftOf="@+id/iv_search"
+        app:layout_constraintRight_toRightOf="@+id/iv_search"
+        app:layout_constraintTop_toBottomOf="@+id/iv_search"
+        />
 
+
+    <!--  WALLET SECTION -->
 
     <ImageView
-        android:id="@+id/iv_create"
+        android:id="@+id/iv_mychannel"
         style="@style/image_attribute_home"
-        android:src="@drawable/ic_create"
-        android:tag="@string/bottom_bar_tag_create"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/bottom_bar_margin_top"
+        android:src="@drawable/ic_channel"
+        android:tag="@string/bottom_bar_tag_channel"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.social.Ui.CustomeView.CustomTextView
-        android:id="@+id/tv_create"
+        android:id="@+id/tv_wallet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/bottom_bar_margin"
-        android:tag="@string/bottom_bar_tag_create"
-        android:text="@string/bootom_bar_create"
-        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/bottom_bar_margin_top"
+        android:layout_marginBottom="@dimen/bottom_bar_margin_top"
+        android:tag="@string/bottom_bar_tag_text_view_channel"
+        android:text="@string/bootom_bar_channel"
+        android:textColor="@color/hint_color"
         android:textSize="@dimen/text_size_bottom_bar"
-        android:textStyle="bold"
-        android:visibility="visible"
-        app:fontType="gotham_bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="@+id/iv_create"
-        app:layout_constraintRight_toRightOf="@+id/iv_create"
-        app:layout_constraintTop_toBottomOf="@+id/iv_create" />
+        app:layout_constraintLeft_toLeftOf="@+id/iv_mychannel"
+        app:layout_constraintRight_toRightOf="@+id/iv_mychannel"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mychannel" />
 
+    <!--  SETTINGS SECTION -->
 
     <ImageView
-        android:id="@+id/iv_video"
+        android:id="@+id/iv_notification"
         style="@style/image_attribute_home"
-        android:src="@drawable/ic_video"
-        android:tag="@string/bottom_bar_tag_video"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/iv_create"
+        android:layout_marginTop="@dimen/bottom_bar_margin_top"
+        android:src="@drawable/ic_notification"
+        android:tag="@string/bottom_bar_tag_notification"
+        app:layout_constraintLeft_toRightOf="@+id/iv_mychannel"
         app:layout_constraintRight_toLeftOf="@+id/iv_profile"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.social.Ui.CustomeView.CustomTextView
-        android:id="@+id/tv_video"
+        android:id="@+id/tv_settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/bottom_bar_margin"
-        android:tag="@string/bottom_bar_tag_text_view_video"
-        android:text="@string/bootom_bar_video"
+        android:layout_marginTop="@dimen/bottom_bar_margin_top"
+        android:layout_marginBottom="@dimen/bottom_bar_margin_top"
+        android:tag="@string/bottom_bar_tag_text_view_notification"
+        android:text="@string/bootom_bar_notification"
         android:textColor="@color/hint_color"
         android:textSize="@dimen/text_size_bottom_bar"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="@+id/iv_video"
-        app:layout_constraintRight_toRightOf="@+id/iv_video"
-        app:layout_constraintTop_toBottomOf="@+id/iv_video" />
+        app:layout_constraintLeft_toLeftOf="@+id/iv_notification"
+        app:layout_constraintRight_toRightOf="@+id/iv_notification"
+        app:layout_constraintTop_toBottomOf="@+id/iv_notification" />
 
+    <!--  SUPPORT SECTION -->
 
     <ImageView
         android:id="@+id/iv_profile"
         style="@style/image_attribute_home"
-        android:layout_marginRight="18dp"
+        android:layout_marginTop="@dimen/bottom_bar_margin_top"
+        android:layout_marginRight="10dp"
         android:src="@drawable/ic_profile"
         android:tag="@string/bottom_bar_tag_profile"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.social.Ui.CustomeView.CustomTextView
-        android:id="@+id/tv_profile"
+        android:id="@+id/tv_support"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/bottom_bar_margin"
+        android:layout_marginTop="@dimen/bottom_bar_margin_top"
+        android:layout_marginBottom="@dimen/bottom_bar_margin_top"
         android:tag="@string/bottom_bar_tag_text_view_profile"
         android:text="@string/bootom_bar_profile"
         android:textColor="@color/hint_color"
         android:textSize="@dimen/text_size_bottom_bar"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@+id/iv_profile"
         app:layout_constraintRight_toRightOf="@+id/iv_profile"
         app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
 
 </android.support.constraint.ConstraintLayout>
-

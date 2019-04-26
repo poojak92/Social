@@ -5,7 +5,7 @@
     android:id="@+id/rl_register"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/white"
     android:fitsSystemWindows="true"
     tools:context="com.social.activity.RegisterActivity">
 
@@ -26,32 +26,46 @@
                 layout="@layout/layout_generic_toolbar"
                 android:visibility="gone" />
 
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_registerTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:layout_constraintDimensionRatio="h,2:0.1"
+            android:paddingLeft="@dimen/layout_left"
+            android:paddingRight="@dimen/layout_right"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_splash"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+               />
 
 
-            <android.support.constraint.ConstraintLayout
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
                 android:id="@+id/cl_login_bottom"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:paddingTop="@dimen/layout_top"
                 android:paddingLeft="@dimen/layout_left"
                 android:paddingRight="@dimen/layout_right"
                 android:paddingBottom="@dimen/layout_bottom"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/cl_registerTop">
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/cv_register"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:cardBackgroundColor="@android:color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:cardCornerRadius="@dimen/card_view_corner_radius"
-                    tools:elevation="@dimen/card_view_elevation">
+
 
                     <ScrollView
                         android:layout_width="match_parent"
@@ -71,15 +85,6 @@
                             android:paddingRight="@dimen/layout_right"
                             android:paddingBottom="@dimen/layout_bottom">
 
-                            <ImageView
-                                android:id="@+id/iv_logo"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:src="@drawable/ic_splash"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintRight_toRightOf="parent"
-                                app:layout_constraintBottom_toTopOf="@+id/til_first_name" />
-
 
                             <com.social.Ui.CustomeView.CustomTextInputLayout
                                 android:id="@+id/til_first_name"
@@ -89,8 +94,8 @@
                                 android:theme="@style/TextInputLayoutHintStyle"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
-                                android:layout_marginTop="@dimen/text_top"
-                                app:layout_constraintTop_toBottomOf="@+id/iv_logo">
+                                app:layout_constraintTop_toTopOf="parent"
+                               >
 
                                 <com.social.Ui.CustomeView.CustomEditText
                                     android:id="@+id/et_first_name"
@@ -98,6 +103,29 @@
                                     android:layout_height="wrap_content"
                                     android:inputType="textCapWords"
                                     android:maxLength="20"
+                                    android:textSize="@dimen/email_address"
+                                    app:fontType="gotham_book" />
+
+                            </com.social.Ui.CustomeView.CustomTextInputLayout>
+
+
+                            <com.social.Ui.CustomeView.CustomTextInputLayout
+                                android:id="@+id/til_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/enter_mobile"
+                                android:theme="@style/TextInputLayoutHintStyle"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:layout_marginTop="@dimen/text_top"
+                                app:layout_constraintTop_toBottomOf="@+id/til_first_name">
+
+                                <com.social.Ui.CustomeView.CustomEditText
+                                    android:id="@+id/et_mobile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:maxLength="10"
                                     android:textSize="@dimen/email_address"
                                     app:fontType="gotham_book" />
 
@@ -112,7 +140,7 @@
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
                                 android:layout_marginTop="@dimen/text_top"
-                                app:layout_constraintTop_toBottomOf="@+id/til_first_name"
+                                app:layout_constraintTop_toBottomOf="@+id/til_mobile"
                                >
 
                                 <com.social.Ui.CustomeView.CustomEditText
@@ -186,10 +214,10 @@
                                 android:background="@drawable/btn_login"
                                 android:enabled="true"
                                 android:text="@string/button_register"
-                                android:textColor="@android:color/white"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/button_text_size"
                                 android:visibility="visible"
-                                app:fontType="gotham_medium"
+                                app:fontType="gotham_light"
                                 android:onClick="startActivity"
                                 style="?android:attr/borderlessButtonStyle"
                                 app:layout_constraintLeft_toLeftOf="parent"
@@ -283,7 +311,7 @@
 
                     </ScrollView>
 
-                </android.support.v7.widget.CardView>
+
 
 
             </android.support.constraint.ConstraintLayout>

@@ -70,7 +70,7 @@ public abstract class BaseToolbarActivity extends BaseAcitivity {
     public void showRightButton(final int id, RightClickListener rightClickListener) {
         if (ibToolbarRight != null) {
             ibToolbarRight.setVisibility(View.VISIBLE);
-            ibToolbarRight.setImageDrawable(getResources().getDrawable(R.drawable.ic_search));
+          //  ibToolbarRight.setImageDrawable(getResources().getDrawable(R.drawable.ic_search));
             this.mRightClickListener = rightClickListener;
         }
 

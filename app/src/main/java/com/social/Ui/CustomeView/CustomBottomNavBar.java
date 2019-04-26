@@ -49,8 +49,8 @@ public class CustomBottomNavBar extends ConstraintLayout {
     }
 
     public void init(){
-        activeTextColor = R.color.red;
-        inactiveTextColor = R.color.hint_color;
+        activeTextColor = R.color.colorblack;
+        inactiveTextColor = R.color.white;
 
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         CustomBottomNavBar view = (CustomBottomNavBar) inflater.inflate(R.layout.layout_bottom_bar, this);

@@ -27,11 +27,7 @@ public class HomeActivity extends BaseBackstackManagerActivity implements Fragme
     @BindView(R.id.bottom_bar)
     CustomBottomNavBar mBottomNavBar;
 
-    @BindView(R.id.clCustomOption)
-    ConstraintLayout mClCustomOption;
 
-    boolean flagClick = false;
-    String mClickedTag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +35,13 @@ public class HomeActivity extends BaseBackstackManagerActivity implements Fragme
         super.onCreate(savedInstanceState);
         loadDashBoardFragment();
         mBottomNavBar.setmIOnBottomBarItemClickListener(this);
-        showRightButton(R.id.ib_toolbar_right, new RightClickListener() {
+        showTitle(getResources().getString(R.string.app_name));
+       /* showRightButton(R.id.ib_toolbar_right, new RightClickListener() {
             @Override
             public void onRightButtonClicked() {
                 mRouter.startActivity(NotificationActivity.class);
             }
-        });
+        });*/
     }
 
     public void loadDashBoardFragment(){
@@ -66,7 +63,7 @@ public class HomeActivity extends BaseBackstackManagerActivity implements Fragme
     @Override
     public void passFragmentTag(String TAG) {
         mTAG=TAG;
-        if(TAG.equals(DashBoardFragment.TAG)) {
+       /* if(TAG.equals(DashBoardFragment.TAG)) {
             showToolabr();
             showTitle(getResources().getString(R.string.app_name));
             showRightButton(R.id.ib_toolbar_right, new RightClickListener() {
@@ -93,60 +90,42 @@ public class HomeActivity extends BaseBackstackManagerActivity implements Fragme
         }
         else if(TAG.equals(MyAccountFragment.TAG)) {
             hideToolbar();
-        }
+        }*/
     }
 
     @Override
     public void onBottomBarItemClicked(String clickedTag) {
        clearBackStackInclusive();
        clearBackStack();
-       if(flagClick){
-           flagClick=false;
-           mClCustomOption.setVisibility(View.GONE);
-       }
-       mClickedTag=clickedTag;
-        switch (clickedTag) {
+
+        /*switch (clickedTag) {
             case AppConstants.BottomBar.ViewTags.VIEW_TAG_HOME:
                 loadDashBoardFragment();
                 break;
-            case AppConstants.BottomBar.ViewTags.VIEW_TAG_GALLERY:
+            case AppConstants.BottomBar.ViewTags.VIEW_TAG_SEARCH:
                 loadGalleryFragment();
                 break;
-            case AppConstants.BottomBar.ViewTags.VIEW_TAG_VIDEO:
+            case AppConstants.BottomBar.ViewTags.VIEW_TAG_NOTIFICATION:
                 loadVideoFragment();
                 break;
             case AppConstants.BottomBar.ViewTags.VIEW_TAG_PROFILE:
                 loadProfileFragment();
                 break;
-        }
+        }*/
     }
 
-    public void createVideoGallery(){
-        if(!flagClick){
-            flagClick=true;
-            mClCustomOption.setVisibility(View.VISIBLE);
-        }else {
-            flagClick=false;
-            mClCustomOption.setVisibility(View.GONE);
-        }
-    }
 
     @Override
     public void onBackPressed() {
-        if(flagClick){
-            flagClick=false;
-            mClCustomOption.setVisibility(View.GONE);
-        }
-        if (mTAG.equals(GalleryFragment.TAG) || mTAG.equals(VideoFragment.TAG)
+        super.onBackPressed();
+        finish();
+      /*  if (mTAG.equals(GalleryFragment.TAG) || mTAG.equals(VideoFragment.TAG)
                 || mTAG.equals(MyAccountFragment.TAG)){
             loadDashBoardFragment();
         }else {
             super.onBackPressed();
             finish();
-        }
+        }*/
     }
 
-    public void openDialog(View view) {
-        createVideoGallery();
-    }
 }

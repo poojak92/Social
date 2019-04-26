@@ -16,7 +16,7 @@ import butterknife.BindView;
 
 public class RegisterActivity extends BaseAcitivity {
 
-    @BindView(R.id.btn_register)
+   /* @BindView(R.id.btn_register)
     CustomButton mBtnRegister;
 
     @BindView(R.id.rl_register)
@@ -27,17 +27,17 @@ public class RegisterActivity extends BaseAcitivity {
 
 
     @BindView(R.id.cl_bottom_view)
-    ConstraintLayout mClBottomView;
+    ConstraintLayout mClBottomView;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_register);
         super.onCreate(savedInstanceState);
-        setTreeObserver();
+      //  setTreeObserver();
 
     }
 
-    public void setTreeObserver() {
+   /* public void setTreeObserver() {
         mRlRegister.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
@@ -57,7 +57,7 @@ public class RegisterActivity extends BaseAcitivity {
                 }
             }
         });
-    }
+    }*/
 
     public void startActivity(View view) {
         mRouter.startActivityClearTop(HomeActivity.class);

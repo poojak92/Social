@@ -16,9 +16,9 @@ public class AppConstants {
         public static class ViewTags{
 
             public static final String VIEW_TAG_HOME = "VIEW_TAG_HOME";
-            public static final String VIEW_TAG_GALLERY = "VIEW_TAG_GALLERY";
-            public static final String VIEW_TAG_CREATE = "VIEW_TAG_CREATE";
-            public static final String VIEW_TAG_VIDEO = "VIEW_TAG_VIDEO";
+            public static final String VIEW_TAG_SEARCH = "VIEW_TAG_SEARCH";
+            public static final String VIEW_TAG_CHANNEL = "VIEW_TAG_CHANNEL";
+            public static final String VIEW_TAG_NOTIFICATION = "VIEW_TAG_NOTIFICATION";
             public static final String VIEW_TAG_PROFILE = "VIEW_TAG_PROFILE";
         }
     }
