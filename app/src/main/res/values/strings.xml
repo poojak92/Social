@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Social</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="splash_msg">Welcome to Scarlett</string>
+    <string name="title_activity_splash">SplashActivity</string>
+
+    // Edit text hints
+    <string name="hint_password">Password</string>
+
+    <string name="text_forgot_password">Forgot Password?</string>
+    <string name="enter_emailaddress">Email</string>
+    <string name="button_login">Sign In</string>
+
+    <string name="login_sign_up">New User? Sign up</string>
+    <string name="button_register">Sign Up</string>
+    <string name="enter_firstName">Name</string>
+    <string name="hint_confirmpassword">Confirm Password</string>
+    <string name="msg_signup">By Signingup, you agree to our</string>
+    <string name="privacy_policy">Privacy Policy </string>
+    <string name="terms"> Terms of Service</string>
+    <string name="and">and</string>
+
+    <string name="bottom_bar_tag_home">VIEW_TAG_HOME</string>
+    <string name="bottom_bar_tag_gallery">VIEW_TAG_GALLERY</string>
+    <string name="bottom_bar_tag_create">VIEW_TAG_CREATE</string>
+    <string name="bottom_bar_tag_video">VIEW_TAG_VIDEO</string>
+    <string name="bottom_bar_tag_profile">VIEW_TAG_PROFILE</string>
+
+    <string name="bottom_bar_tag_text_view_home">VIEW_TAG_HOME_TEXT_VIEW</string>
+    <string name="bottom_bar_tag_text_view_gallery">VIEW_TAG_GALLERY_TEXT_VIEW</string>
+    <string name="bottom_bar_tag_text_view_create">VIEW_TAG_CREATE_TEXT_VIEW</string>
+    <string name="bottom_bar_tag_text_view_video">VIEW_TAG_VIDEO_TEXT_VIEW</string>
+    <string name="bottom_bar_tag_text_view_profile">VIEW_TAG_PROFILE_TEXT_VIEW</string>
+
+    <string name="bootom_bar_create">Create</string>
+
+
+    <string name="text_loginwith">Sign in via Facebook</string>
+    <string name="txt_skip">Skip</string>
+    <string name="button_facebook">Facebook</string>
+    <string name="txt_desc">Unless required by applicable law or agreed to in writing,
+        software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR
+        CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing
+        permissions and limitations under the License.Unless required by applicable law or agreed to in writing,
+        software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR
+        CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing
+        permissions and limitations under the License.</string>
+
+
+    <string name="read_more">See more</string>
+    <string name="read_less">See less</string>
+    <string name="bootom_bar_home">Home</string>
+    <string name="bootom_bar_gallery">Gallery</string>
+    <string name="bootom_bar_video">Video</string>
+    <string name="bootom_bar_profile">Profile</string>
+    <string name="text_create_gallery">Create Gallery</string>
+    <string name="text_create_video">Create Video</string>
+
+
+    <string name="camera_profile_pic_permission_alert">We need permission to write on your device external storage and open camera, without which we can not change your profile picture.\nPlease grant requested permission.</string>
+    <string name="permission_request_header">Permission Request</string>
+
+    <string name="dialog_button_ok">Ok</string>
+    <string name="dialog_button_yes">Yes</string>
+    <string name="dialog_button_cancel">Cancel</string>
+    <string name="search_title">Search</string>
+
+    /actiivty name
+    <string name="wallet">Wallet</string>
+    <string name="myEarn">My earn</string>
+    <string name="recharge">Recharge</string>
+    <string name="withdraw">Withdraw</string>
+
+    <string name="transaction">Transaction</string>
+    <string name="followers">Followers</string>
+    <string name="aboutus">About us</string>
+    <string name="notificaton">Notification</string>
+    <string name="txt_description">Description</string>
+
+
+</resources>

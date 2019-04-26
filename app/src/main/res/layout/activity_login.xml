@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    tools:context="com.social.activity.LoginActivity">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <include
+                layout="@layout/layout_generic_toolbar"
+                android:visibility="gone" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_login_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/layout_top"
+                android:paddingLeft="@dimen/layout_left"
+                android:paddingRight="@dimen/layout_right"
+                android:paddingBottom="@dimen/layout_bottom"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:cardCornerRadius="@dimen/card_view_corner_radius"
+                    tools:elevation="@dimen/card_view_elevation">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:overScrollMode="never"
+                        >
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/cl_card_child"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/layout_left"
+                            android:paddingRight="@dimen/layout_right"
+                            android:layout_marginBottom="@dimen/btn_register_top"
+                            >
+
+                            <ImageView
+                                android:id="@+id/iv_logo"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/ic_splash"
+                                android:layout_marginTop="@dimen/layout_top"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <RelativeLayout
+                                android:id="@+id/llfb"
+                                android:background="@android:color/white"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/layout_top"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/iv_logo">
+
+                                <FrameLayout
+                                    android:id="@+id/FrameLayout1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <!--  <com.facebook.login.widget.LoginButton
+                                          android:id="@+id/login_button"
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:visibility="gone" />-->
+
+                                    <com.social.Ui.CustomeView.CustomButton
+                                        android:id="@+id/fb"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/btn_fb_login"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="16dp"
+                                        android:textAllCaps="false"
+                                        android:gravity="center"
+                                        style="?android:attr/borderlessButtonStyle"
+                                        android:enabled="true"
+                                        android:text="@string/button_facebook"
+                                        android:visibility="visible"
+                                        app:fontType="gotham_medium"
+                                        />
+                                </FrameLayout>
+
+
+                            </RelativeLayout>
+
+                            <com.social.Ui.CustomeView.CustomTextInputLayout
+                                android:id="@+id/til_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/layout_top"
+                                android:hint="@string/enter_emailaddress"
+                                android:theme="@style/TextInputLayoutHintStyle"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/llfb">
+
+                                <com.social.Ui.CustomeView.CustomEditText
+                                    android:id="@+id/et_email_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textEmailAddress"
+                                    android:maxLength="50"
+                                    android:textSize="@dimen/email_address"
+                                    app:fontType="gotham_book" />
+
+                            </com.social.Ui.CustomeView.CustomTextInputLayout>
+
+
+                            <com.social.Ui.CustomeView.CustomTextInputLayout
+                                android:id="@+id/til_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/text_top"
+                                android:layout_marginBottom="@dimen/text_top"
+                                android:hint="@string/hint_password"
+                                android:theme="@style/TextInputLayoutHintStyle"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/til_email">
+
+                                <com.social.Ui.CustomeView.CustomEditText
+                                    android:id="@+id/et_password"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="textPassword"
+                                    android:maxLength="50"
+                                    android:textSize="@dimen/email_address"
+                                    app:fontType="gotham_book" />
+
+                            </com.social.Ui.CustomeView.CustomTextInputLayout>
+
+
+                            <com.social.Ui.CustomeView.CustomTextView
+                                android:id="@+id/tv_forgot_password"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_forgot_password"
+                                android:textColor="@color/hint_color"
+                                android:textSize="@dimen/forgot_text"
+                                app:layout_constraintTop_toBottomOf="@+id/til_password"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:layout_marginTop="@dimen/btn_register_top" />
+
+
+                            <com.social.Ui.CustomeView.CustomButton
+                                android:id="@+id/btn_login"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/btn_register_top"
+                                android:background="@drawable/btn_login"
+                                android:enabled="true"
+                                android:onClick="startActivity"
+                                android:text="@string/button_login"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/button_text_size"
+                                android:visibility="visible"
+                                app:fontType="gotham_medium"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password" />
+
+
+                            <com.social.Ui.CustomeView.CustomTextView
+                                android:id="@+id/tv_sign_up"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/btn_register_top"
+                                android:clickable="true"
+                                android:contextClickable="true"
+                                android:text="@string/login_sign_up"
+                                android:textSize="@dimen/login_sign_up"
+                                app:fontType="gotham_book"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+                            <com.social.Ui.CustomeView.CustomTextView
+                                android:id="@+id/tv_skip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:contextClickable="true"
+                                app:fontType="gotham_bold"
+                                android:text="@string/txt_skip"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/login_sign_up"
+                                android:layout_marginLeft="@dimen/layout_left"
+                                android:layout_marginTop="@dimen/btn_register_top"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/btn_login"
+                                app:layout_constraintTop_toBottomOf="@+id/btn_login"
+                                app:layout_constraintLeft_toRightOf="@+id/tv_sign_up" />
+
+
+
+                        </android.support.constraint.ConstraintLayout>
+
+
+                    </ScrollView>
+
+                </android.support.v7.widget.CardView>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

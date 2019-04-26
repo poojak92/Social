@@ -1,0 +1,20 @@
+package com.social.activity;
+
+import android.os.Bundle;
+
+import com.social.R;
+import com.social.activity.base.BaseAcitivity;
+
+public class CreateGalleryActivity extends BaseAcitivity {
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        setContentView(R.layout.activity_creategallery);
+        super.onCreate(savedInstanceState);
+
+    }
+
+
+}

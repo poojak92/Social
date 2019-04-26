@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RelativeLayout
+            android:id="@+id/rlImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+
+            <ImageView
+                android:id="@+id/img_profilebackground"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_temp" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_thumbProfile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/img_profilebackground"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-40dp"
+                android:src="@drawable/ic_temp"
+                app:civ_border_color="@color/colorblack"
+                app:civ_border_width="2dp" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/layout_right"
+            android:layout_marginTop="@dimen/layout_top"
+            android:visibility="gone"
+            android:src="@drawable/ic_toolbar_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_thumbPhotoedit"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="@dimen/layout_top"
+            android:layout_marginRight="@dimen/layout_right"
+            android:layout_marginBottom="@dimen/btn_register_top"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.social.Ui.CustomeView.CustomTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_left"
+            android:paddingTop="4dp"
+            android:text="Natalie Portman "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorblack"
+            android:textSize="@dimen/text_size_18_sp"
+            android:textStyle="bold"
+            app:fontType="gotham_bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlImage" />
+
+        <LinearLayout
+            android:id="@+id/llEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name">
+
+            <ImageView
+                android:id="@+id/img_email"
+                style="@style/image_profile_attribute"
+                android:src="@drawable/ic_email"
+                android:layout_marginRight="8dp"/>
+
+            <com.social.Ui.CustomeView.CustomTextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Natalie.Portman@gmail.com "
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_14_sp"
+                app:fontType="gotham_bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llEmail">
+
+            <ImageView
+                android:id="@+id/img_phone"
+                style="@style/image_profile_attribute"
+                android:src="@drawable/ic_phone"
+                android:layout_marginRight="8dp"/>
+
+
+            <com.social.Ui.CustomeView.CustomTextView
+                android:id="@+id/tv_mobileno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21-098776655 "
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/text_size_12_sp"
+                app:fontType="gotham_medium"
+               />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llPhone">
+
+            <ImageView
+                android:id="@+id/img_area"
+                style="@style/image_profile_attribute"
+                android:src="@drawable/ic_marker"
+                android:layout_marginRight="8dp"/>
+
+            <com.social.Ui.CustomeView.CustomTextView
+                android:id="@+id/tv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pune "
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/text_size_12_sp"
+                app:fontType="gotham_medium" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="@dimen/layout_top"
+            android:background="@color/hint_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llarea"></View>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
